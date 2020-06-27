@@ -2,7 +2,7 @@ package com.xiocrypt.foxyadditions.util.eventbuses;
 
 import com.xiocrypt.foxyadditions.FoxyAdditionsMod;
 import com.xiocrypt.foxyadditions.client.entity.render.TamedFoxRender;
-import com.xiocrypt.foxyadditions.util.RegistryHandler;
+import com.xiocrypt.foxyadditions.util.registries.EntityReg;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.client.registry.RenderingRegistry;
@@ -15,6 +15,6 @@ public class ClientEventBusSubscriber {
 
     @SubscribeEvent
     public static void clientSetup(FMLClientSetupEvent event) {
-        RenderingRegistry.registerEntityRenderingHandler(RegistryHandler.TAMEDFOX.get(), TamedFoxRender::new);
+        RenderingRegistry.registerEntityRenderingHandler(EntityReg.TAMEDFOX.get(), TamedFoxRender::new);
     }
 }
