@@ -89,10 +89,6 @@ public class TamedFox extends AnimalEntity {
     @Override
     public ILivingEntityData onInitialSpawn(@Nonnull IWorld worldIn, @Nonnull DifficultyInstance difficultyIn, @Nonnull SpawnReason reason, ILivingEntityData spawnDataIn, CompoundNBT dataTag) {
         ILivingEntityData livingEntity = super.onInitialSpawn(worldIn, difficultyIn, reason, spawnDataIn, dataTag);
-        if(this.isChild()){
-            FoxyAdditionsMod.LOGGER.info("Set Growing Age");
-            this.setGrowingAge(-30000);
-        }
         TamedFox.Type foxentity$type = TamedFox.Type.getTypeByIndex(this.rand.nextInt(7));
         if (spawnDataIn instanceof TamedFox.FoxData) {
             foxentity$type = ((FoxData)spawnDataIn).type;
