@@ -25,7 +25,6 @@ public class FoxyAdditionsMod
         modEventBus.addListener(this::setup);
         modEventBus.addListener(this::doClientStuff);
 
-        //RegistryHandler.init();
         ItemReg.ITEMS.register(modEventBus);
         //BlockReg.BLOCKS.register(modEventBus);
         EntityReg.ENTITY_TYPES.register(modEventBus);
